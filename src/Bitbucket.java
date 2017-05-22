@@ -1,32 +1,15 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class Bitbucket extends ArrayList<Integer> {
 
     public Integer minValue() {
-        if (this.isEmpty()) {
-            return 0;
-        }
-        Integer min = this.get(0);
-        for (Integer value : this) {
-            if (value < min) {
-                min = value;
-            }
-        }
-        return min;
+        return Collections.min(this);
     }
 
     public Integer maxValue() {
-        if (this.isEmpty()) {
-            return 0;
-        }
-        Integer max = this.get(0);
-        for (Integer value : this) {
-            if (value > max) {
-                max = value;
-            }
-        }
-        return max;
+        return Collections.max(this);
     }
 
     public double getArithmeticMean(){
